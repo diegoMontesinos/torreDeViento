@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Torre de Viento</title>
+		<link rel="shortcut icon" href="../../favicon.ico"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 		<!-- S T Y L E S H E E T S -->
@@ -39,13 +40,17 @@
 		}
 
 		$(document).ready(function() {
+			$('#logo-img').hover(function() {
+				$('#logo-img img').attr('src', '../../assets/images/02-LOGO.png');
+			}, function() {
+				$('#logo-img img').attr('src', '../../assets/images/01-LOGO.png');
+			});
+
 			$('#footer-legals').hover(function() {
 				$('#footer-legals img').attr('src', '../../assets/images/legales_sub.png');
 			}, function() {
 				$('#footer-legals img').attr('src', '../../assets/images/legales.png');
 			});
-			
-			putTextInfo('info');
 
 			$('#semblanza').click(function(e) {
 				e.preventDefault();
@@ -56,6 +61,8 @@
 				e.preventDefault();
 				window.location.href = '../../assets/images/colaboradores/VALERIA PALOMINO/CV Valeria Palomino De las Casas.pdf';
 			});
+
+			putTextInfo('info');
 		});
 		</script>
 	</head>
@@ -65,7 +72,9 @@
 
 				<!-- H E A D E R -->
 				<div id="header">
-					<div id="logo-img"></div>
+					<div id="logo-img">
+						<img src="../../assets/images/01-LOGO.png" width="100%" height="100%" />
+					</div>
 					<div id="languages">
 						<a href="#">Español</a>
 					 	/ 
@@ -131,10 +140,10 @@
 
 				<!-- F O O T E R -->
 				<div id="footer">
-					<div id="footer-legals" style="width: 14%; cursor: pointer; margin-top: 11px;">
+					<div id="footer-legals" style="width: 14%; cursor: pointer; margin-top: 9px;">
 						<img src="../../assets/images/legales.png" width="100%" height="100%">
 					</div>
-					<div id="footer-title" style="width: 36%; height: 20px; margin-top: 9px;">
+					<div id="footer-title" style="width: 36%; height: 20px; margin-top: 10px; margin-right: 2px;">
 						<img src="../../assets/images/titulo_torre.png" width="100%" height="100%">
 					</div>
 				</div>
