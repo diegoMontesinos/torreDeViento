@@ -1,0 +1,52 @@
+/* S M O O T H D I V S C R O L L    S T Y L E */
+
+/* Invisible left hotspot */
+div.scrollingHotSpotLeft {
+	top: 200px;
+	width: 25px;
+	height: 60px;
+
+	position: absolute;
+	z-index: 200;
+	left: 5px;
+}
+
+/* Visible left hotspot */
+div.scrollingHotSpotLeftVisible {
+	opacity: 1.5;
+	-moz-opacity: 1.5;
+	filter: alpha(opacity = 150);
+}
+
+/* Invisible right hotspot */
+div.scrollingHotSpotRight {
+	top: 200px;
+	width: 25px;
+	height: 60px;
+	
+	position: absolute;
+	z-index: 200;
+	right: 5px;
+}
+
+/* Visible right hotspot */
+div.scrollingHotSpotRightVisible {
+	opacity: 1.5;
+	-moz-opacity: 1.5;
+	filter: alpha(opacity = 150);
+}
+
+/* The scroll wrapper is always the same width and height as the containing element (div).
+   Overflow is hidden because you don't want to show all of the scrollable area.
+*/
+div.scrollWrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #FFFFFF;
+}
+
+div.scrollableArea {
+	height: 100%;
+	position: relative;
+}

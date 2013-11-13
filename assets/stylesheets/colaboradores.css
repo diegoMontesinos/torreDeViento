@@ -1,0 +1,98 @@
+div#menu-navigator-colaborador {
+	width: 100%;
+	height: 50px;
+	display: block;
+}
+
+#logo-img-blanco {
+	position: absolute;
+	width: 250px;
+	height: 75px;
+}
+
+.cara-up{
+	position: relative;
+	display: block;
+
+	top: 52%;
+	left: 45%;
+	width: 9.9%;
+	height: 16.6%;
+	margin-top: -99px;
+	list-style: none;
+	opacity: 1;
+	z-index: 5;
+
+	cursor: pointer;
+}
+
+.cara-up-neg {
+	position: relative;
+	display: block;
+	margin-top: -99px;
+	left: 45%;
+	width: 9.9%;
+	height: 16.6%;
+	list-style: none;
+	 
+}
+
+
+#colaboradores-img {
+	position: relative;
+}
+
+.div-cara{
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	width: 9.8%;
+	height: 16.5%;
+	margin: 0px 1px 0px 1px;
+
+	cursor: pointer;
+}
+
+.div-sprocket{
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	width: 4.9%;
+	height: 16.5%;
+	margin: 0px 0px 0px 1px;
+}
+
+
+.img1-1{
+ opacity: 1;
+ position: relative;
+}
+
+.img1-1-neg{
+	position: absolute;
+}
+
+.img1-1:hover{
+	padding: 0;
+	opacity: 0;
+	transition: opacity .25s linear;
+	-moz-transition: opacity .25s linear;
+	-o-transition: opacity .25s linear;
+	-webkit-transition: opacity .25s linear;
+	-ms-transition: opacity .25s linear;
+}
+
+.sprocket{
+	opacity: 1;
+}
+
+.sprocket-neg{
+	opacity: 0;
+	position: absolute;
+}
+
+.text-footer {
+	color: #FFFFFF;
+}

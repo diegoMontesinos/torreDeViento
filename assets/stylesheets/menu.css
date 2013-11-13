@@ -1,0 +1,95 @@
+/* ESTILOS Y ANIMACIONES DEL MENU */
+
+div#menu-navigator {
+	width: 100%;
+	height: 50px;
+
+	display: block;
+	background-color: #000000;
+}
+
+ul#menu {
+	width: 100%;
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+
+	color: #FFFFFF;
+	list-style: none;
+	display: inline-table;
+}
+
+ul#menu:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+ul#menu > li {
+	height: 50px;
+
+	position: relative;
+	float: left;
+
+	padding-top: 14px;
+	letter-spacing: 0.4px;
+	font-family: latha, latha_ie;
+	font-size: 17px;
+}
+
+ul#menu > li a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+ul#menu > li.dropdown:hover {
+	background: #242529;
+}
+
+ul#menu > li.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+ul#menu li > ul.dropdown-menu {
+	position: absolute;
+
+	padding: 0;
+	margin: 0;
+	border-radius: 0px;
+
+	background: rgb(41, 43, 47);
+	opacity: 0.85;
+
+	font-family: euphemia, euphemia_ie;
+	font-size: 13px;
+}
+
+ul#menu li > ul.dropdown-menu {
+	float:  none;
+
+	padding: 0;
+	margin: 0;
+	border: 0px;
+}
+
+.dropdown-item {
+	min-width: 100%;
+	max-width: 100%;
+	height: 25px;
+
+	position: relative;
+
+	padding-left: 10px;
+	padding-top: 3px;
+
+	cursor: pointer;
+}
+
+.dropdown-item:hover {
+	background: rgb(189, 190, 191);
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+
+	color: #000000;
+}

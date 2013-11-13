@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html style="background: #000000">
+	<head>
+		<title>Torre de Viento</title>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- S T Y L E S H E E T S -->
+		<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="../assets/stylesheets/menu.css">
+		<link rel="stylesheet" type="text/css" href="../assets/stylesheets/colaboradores.css">
+
+		<!-- J A V A S C R I P T -->
+		<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="../assets/js/grid_layout.js" type="text/javascript"></script>
+		<script src="../assets/js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+		<script src="../assets/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+		<script src="../assets/js/jquery.smoothDivScroll-1.3.js" type="text/javascript"></script>
+
+		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../assets/bootstrap/js/twitter-bootstrap-hover-dropdown.js"></script>
+
+		<script type="text/javascript">
+		function showColaborador(element) {
+			var urlColaborador = $(element).attr("urlColab");
+			$(location).attr("href", urlColaborador);
+		}
+
+		$(document).ready(function() {
+			$('#logo-img-blanco').hover(function() {
+				$('#logo-img-blanco img').attr('src', '../assets/images/colaboradores/02-LOGO.png');
+			}, function() {
+				$('#logo-img-blanco img').attr('src', '../assets/images/colaboradores/01-LOGO.png');
+			});
+
+			$('#footer-legals').hover(function() {
+				$('#footer-legals img').attr('src', '../assets/images/legales_sub.png');
+			}, function() {
+				$('#footer-legals img').attr('src', '../assets/images/legales.png');
+			});
+		});
+		</script>
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="assets/bootstrap/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body style="background: #000000 ">
+		<div id="wrapper">
+
+			<div class="container" style="width: 1000px; padding: 0">
+
+				<!-- H E A D E R -->
+				<div id="header">
+					<div id="logo-img-blanco">
+						<img src="../assets/images/colaboradores/01-LOGO.png" width="100%" height="100%" />
+					</div>
+					<div id="languages">
+						<a href="#">Español</a>
+					 	/ 
+						<a href="#">English</a>
+					</div>
+				</div>
+
+				<!-- M E N U -->
+				<div id="menu-navigator-colaborador" style="margin-top: 25px; opacity: 1; z-index: 20; position: relative">
+					<ul id="menu">
+						<li style="width: 13.8%; padding-left: 5%; padding-right: 4%;"><a href="../index.html">INICIO</a></li>
+						<li class="dropdown" style="width: 13%; padding-left: 1.9%; padding-right: 1.9%;"><center>NOSOTROS</center>
+							<ul class="dropdown-menu" style="max-width: 100%; min-width: 100%;">
+								<li><div class="dropdown-item">Acerca de...</div></li>
+								<li><div class="dropdown-item">Qué hacemos</div></li>
+							</ul>
+						</li>
+						<li style="width: 25.8%; padding-left: 3.9%; padding-right: 2.9%;"><a href="../obras/catalogo.html">CATÁLOGO  DE  OBRAS</a></li>
+						<li style="width: 20.6%; padding-left: 3%; padding-right: 2.9%;"><a href="colaboradores.html">COLABORADORES</a></li>
+						<li style="width: 13.5%; padding-left: 2.9%; padding-right: 4%;"><a href="#">PRENSA</a></li>
+						<li class="dropdown" style="width: 10.2%; padding-left: 1.9%; padding-right: 1.9%;"><center>EXTRAS</center>
+							<ul class="dropdown-menu" style="max-width: 100%; min-width: 100%;">
+								<li><div class="dropdown-item">Links</div></li>
+								<li><div class="dropdown-item">Descargas</div></li>
+								<li><div class="dropdown-item">Noticias</div></li>
+								<li><div class="dropdown-item">Contacto</div></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div id="colaboradores-img" style="margin-top: -50px; z-index:0; ">
+					<img src="../assets/images/colaboradores/HOME.jpg" width="1000" height="300"> 
+				</div>
+
+				<!-- G A L L E R Y -->
+				<div id= "gallery">
+					<div class="cara-up" style="display: block" onclick="showColaborador(this)" urlColab="juliana_vanscoit/show.html">
+						<img class="img1-1" src="../assets/images/colaboradores/JULIANA VANSCOIT/JULIANA VANSCOIT SPROKET.jpg" width="100" height="99">
+					</div>
+					<div class="cara-up-neg" style="display: block" onclick="showColaborador(this)" urlColab="colaboradores.html">
+						<img src="../assets/images/colaboradores/JULIANA VANSCOIT/JULIANA VANSCOIT NEGATIVO.jpg" width="100" height="99" >
+					</div>
+						
+					<div id="fila1" >
+						<div class="div-sprocket">
+							<img class="sprocket" src="../assets/images/colaboradores/sprocket-blanco.jpg" width="50" height="99">
+						</div>
+						
+						<div id= "cara1-1" class="div-cara" onclick="showColaborador(this)" urlColab="alejandra_rosales/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ALEJANDRA ROSALES/ALEJANDRA ROSALES NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ALEJANDRA ROSALES/ALEJANDRA ROSALES SPROKET.jpg" width="100" height="99" >
+						</div>
+
+
+						<div id="cara1-2" class="div-cara" onclick="showColaborador(this)" urlColab="alberto_tufino/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ALBERTO TUFIÑO/TUFIÑO NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ALBERTO TUFIÑO/TUFIÑO SPROKET.jpg" width="100" height="99" >
+						</div>
+
+						<div id= "cara1-3" class="div-cara" onclick="showColaborador(this)" urlColab="alejandra_sandoval/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ALEJANDRA SANDOVAL/ALEJANDRA SANDOVAL NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ALEJANDRA SANDOVAL/ALEJANDRA SANDOVAL SPROKET.jpg" width="100" height="99" >
+						</div>
+						
+						<div id= "cara1-4" class="div-cara" onclick="showColaborador(this)" urlColab="antonio_solares/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ANTONIO SOLARES/ANTONIO SOLARES NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ANTONIO SOLARES/ANTONIO SOLARES SPROKET.jpg" width="100" height="99" >
+						</div>
+						
+						<div id= "cara3.7" class="div-cara" onclick="showColaborador(this)" urlColab="valeria_palomino/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/VALERIA PALOMINO/VALERIA PALOMINO NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/VALERIA PALOMINO/VALERIA PALOMINO SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara1-5" class="div-cara" onclick="showColaborador(this)" urlColab="carlos_alvar/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/CARLOS ALVAR/CARLOS ALVAR NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/CARLOS ALVAR/CARLOS ALVAR SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara1-6" class="div-cara" onclick="showColaborador(this)" urlColab="ara_rubio/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ARA RUBIO/ARA RUBIO NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ARA RUBIO/ARA RUBIO SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara1-7" class="div-cara" onclick="showColaborador(this)" urlColab="cesar_barajas/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/CÉSAR BARAJAS/CEZAR BARAJAS NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/CÉSAR BARAJAS/CEZAR BARAJAS SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara1-8" class="div-cara" onclick="showColaborador(this)" urlColab="claudia_mendoza/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/CLAUDIA MENDOZA/CLAUDIA MENDOZA NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/CLAUDIA MENDOZA/CLAUDIA MENDOZA SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div  class="div-sprocket">
+							<img class="sprocket-neg div-cara"  src="../assets/images/colaboradores/sprocket-negro.jpg" width="50" height="99">
+							<img class="sprocket"  src="../assets/images/colaboradores/sprocket-blanco.jpg" width="50" height="99">
+						</div>
+
+					</div>
+					
+					<div id= "fila2">
+						<div  class="div-sprocket">
+							<img class="sprocket-neg div-cara"  src="../assets/images/colaboradores/sprocket-negro.jpg" width="50" height="99">
+							<img class="sprocket"  src="../assets/images/colaboradores/sprocket-blanco.jpg" width="50" height="99">
+						</div>
+						<div id= "cara2.1" class="div-cara" onclick="showColaborador(this)" urlColab="christian_gohmer/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/CHRISTIAN GOHMER/CHRISTIAN GOHMER NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/CHRISTIAN GOHMER/CHRISTIAN GOHMER SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara2.2" class="div-cara" onclick="showColaborador(this)" urlColab="contadores/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/CONTADORES/CONSULTORES NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/CONTADORES/CONSULTORES SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "contadores" class="div-cara" onclick="showColaborador(this)" urlColab="colaboradores.html">
+							<img class="brocket" src="../assets/images/colaboradores/SPROKET ADICIONAL 2.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara2.3" class="div-cara" onclick="showColaborador(this)" urlColab="eliu_gonzalez/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ELIU GONZÁLEZ/ELIU GONZALEZ NEGATIVO.jpg" width="100" height=	"99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ELIU GONZÁLEZ/ELIU GONZALEZ SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara2.4" class="div-cara" onclick="showColaborador(this)" urlColab="david_anaya/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/DAVID ANAYA/DAVID ANAYA NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/DAVID ANAYA/DAVID ANAYA SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara2.4" class="div-cara" onclick="showColaborador(this)" urlColab="eloisa_garcia_guerrero/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ELOISA GARCIA GUERRERO/ELOISA GARCIA GUERRERO NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ELOISA GARCIA GUERRERO/ELOISA GARCIA GUERRERO SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "coordinacion" class="div-cara" onclick="showColaborador(this)" urlColab="colaboradores.html">
+							<img class="brocket" src="../assets/images/colaboradores/SPROKET ADICIONAL 2.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara2.4" class="div-cara" onclick="showColaborador(this)" urlColab="ilka_monforte/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/ILKA MONFORTE/ILKA MONFORTE NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/ILKA MONFORTE/ILKA MONFORTE SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara2.7" class="div-cara" onclick="showColaborador(this)" urlColab="julio_valle/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/JULIO VALLE/JULIO VALLE NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/JULIO VALLE/JULIO VALLE SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div  class="div-sprocket">
+							<img class="sprocket-neg div-cara"  src="../assets/images/colaboradores/sprocket-negro.jpg" width="50" height="99">
+							<img class="sprocket"  src="../assets/images/colaboradores/sprocket-blanco.jpg" width="50" height="99">
+						</div>
+					</div>
+				
+
+					<div id="fila3">
+						<div  class="div-sprocket">
+							<img class="sprocket-neg div-cara"  src="../assets/images/colaboradores/sprocket-negro.jpg" width="50" height="99">
+							<img class="sprocket"  src="../assets/images/colaboradores/sprocket-blanco.jpg" width="50" height="99">
+						</div>
+						<div id= "sprocket3.1" class="div-cara" onclick="showColaborador(this)" urlColab="colaboradores.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/LIZ MENDOZA/LIZ MENDOZA NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/LIZ MENDOZA/LIZ MENDOZA SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.0" class="div-cara" onclick="showColaborador(this)" urlColab="nicolas_pelaez/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/NICOLÁS PELÁEZ/NICOLAS PELAEZ NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/NICOLÁS PELÁEZ/NICOLAS PELAEZ SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.1" class="div-cara" onclick="showColaborador(this)" urlColab="martha_chavez/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/MARTHA CHÁVEZ/MARTHA CHAVEZ NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/MARTHA CHÁVEZ/MARTHA CHAVEZ SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.2" class="div-cara" onclick="showColaborador(this)" urlColab="colaboradores_frecuentes/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/COLABORADORES FRECUENTES/Colaboradores Frecuentes negativo.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/COLABORADORES FRECUENTES/Colaboradores Frecuentes sproket.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.3-" class="div-cara" onclick="showColaborador(this)" urlColab="mayra_juarez/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/MAYRA JUÁREZ/MAYRA JUAREZ NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/MAYRA JUÁREZ/MAYRA JUAREZ SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.4" class="div-cara" onclick="showColaborador(this)" urlColab="rodrigo_caravantes/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/RODRIGO CARAVANTES/RODRIGO CARAVANTES NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/RODRIGO CARAVANTES/RODRIGO CARAVANTES SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.5" class="div-cara" onclick="showColaborador(this)" urlColab="pilar_gaistardo/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/PILAR GAISTARDO/PILAR GAISTARDO NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/PILAR GAISTARDO/PILAR GAISTARDO SPROKET.jpg" width="100" height="99" >
+						</div>
+						<div id= "cara3.6" class="div-cara" onclick="showColaborador(this)" urlColab="rodrigo_pelaez/show.html">
+							<img class="img1-1-neg" src="../assets/images/colaboradores/RODRIGO PELÁEZ/RODRIGO PELAEZ NEGATIVO.jpg" width="100" height="99" >
+							<img class="img1-1" src="../assets/images/colaboradores/RODRIGO PELÁEZ/RODRIGO PELAEZ SPROKET.jpg" width="100" height="99" >
+						</div>
+
+						<div id= "diseño" class="div-cara" onclick="showColaborador(this)" urlColab="colaboradores.html">
+							<img class="brocket" src="../assets/images/colaboradores/SPROKET ADICIONAL 1.jpg" width="100" height="99">
+						</div>
+
+						
+						<div  class="div-sprocket">
+							<img class="sprocket-neg div-cara"  src="../assets/images/colaboradores/sprocket-negro.jpg" width="50" height="99">
+							<img class="sprocket"  src="../assets/images/colaboradores/sprocket-blanco.jpg" width="50" height="99">
+						</div>
+					</div>
+				</div> 
+
+				<!-- F O O T E R -->
+				<div id="footer">
+					<div id="footer-legals" style="width: 14%; cursor: pointer; margin-top: 10px;">
+						<img src="../assets/images/legales.png" width="100%" height="100%">
+					</div>
+					<div id="footer-title" style="width: 36%; height: 20px; margin-top: 11px; margin-right: 2px;">
+						<img src="../assets/images/titulo_torre_bco.png" width="100%" height="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

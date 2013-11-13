@@ -1,0 +1,206 @@
+body {
+	width: 100%;
+	min-height: 100%;
+
+	background: linear-gradient(top , #FFFFFF, #a3a3a3) repeat-x;	
+	background: -moz-linear-gradient(top , #FFFFFF , #a3a3a3) repeat-x;
+    background: -webkit-linear-gradient(top , #FFFFFF , #a3a3a3)repeat-x;
+    background: -ms-linear-gradient(top, #FFFFFF , #a3a3a3)repeat-x;
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#FFFFFF', endColorstr='#a3a3a3');
+}
+
+html {
+	width: 100%;
+	min-height: 100%;
+
+	background: #a3a3a3;
+}
+
+/* DEFINICION TIPOGRAFIAS */
+@font-face {
+	font-family: euphemia;
+	src: url("../fonts/euphemia.ttf");
+}
+
+@font-face {
+	font-family: euphemia_ie;
+	src: url("../fonts/euphemia.eot");
+}
+
+@font-face {
+	font-family: latha;
+	src: url("../fonts/latha.ttf");
+}
+
+@font-face {
+	font-family: latha_ie;
+	src: url("../fonts/latha.eot");
+}
+
+@font-face {
+	font-family: felixti;
+	src: url("../fonts/felixti.ttf");
+}
+
+@font-face {
+	font-family: felixti_ie;
+	src: url("../fonts/felixti.eot");
+}
+
+@font-face {
+	font-family: tahoma_;
+	src: url("../fonts/tahoma.ttf");
+}
+
+@font-face {
+	font-family: tahoma_ie;
+	src: url("../fonts/tahoma.eot");
+}
+
+@font-face {
+	font-family: calibri;
+	src: url("../fonts/CALIBRI.TTF");
+}
+
+@font-face {
+	font-family: calibri_ie;
+	src: url("../fonts/CALIBRI.eot");
+}
+
+/* DEFINICION POR ID */
+#wrapper {
+	width: 100%;
+	min-height: 100%;
+}
+
+#header {
+	width: 100%;
+	height:  70%;
+	margin-top:25px;
+	top: 50%;
+	left: 50%;
+}
+
+#logo-img {
+	position: absolute;
+	width: 250px;
+	height: 75px;
+}
+
+#languages {
+	font-family: euphemia, euphemia_ie;
+	font-size: 13px;
+
+	color: rgb(21, 93, 145);
+	margin-top: 5.6%;
+	float: right;
+}
+
+
+/******************************************************/
+#carousel {
+	width: 100%;
+	height: 400px;
+
+	margin-top: 25px;
+
+	background-color: #000000;
+}
+
+#carousel div {
+	cursor: pointer;
+	margin-right: -500px;
+	float: left;
+	background-position: center center;
+	position: relative;
+}
+
+#carousel div:last-child {
+	cursor: inherit;
+}
+
+/******************************************************/
+
+#news-home {
+	width: 100%;
+	height: 150px;
+
+	background-color: #FFFFFF;
+}
+
+div.news-item-left { 
+	width: 25%;
+
+	float: left;
+	padding-right: 1px;
+}
+
+div.news-item {
+	width: 25%;
+
+	float: left;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+div.news-item-right {
+	width: 25%;
+
+	float: left;
+	padding-left: 1px;
+}
+
+div.news-link {
+	width: 112px;
+	height: 25px;
+
+	float: bottom;
+	position: relative;
+	bottom: 37px;
+	left: 124px;
+
+	margin: 0;
+	padding-top: 2px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+
+	background-color: #1A171B;
+	opacity: 0.8;
+	color: #FFFFFF;
+
+	font-family: euphemia, euphemia_ie;
+	font-size: 10px;
+	line-height: 10px;
+	text-align: justify;
+
+	cursor: pointer;
+}
+
+#ruler {
+	width: 112px;
+	height: 25px;
+
+	margin: 0;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+
+	visibility: hidden;
+
+	font-family: euphemia, euphemia_ie;
+	font-size: 7px;
+	text-align: justify;
+}
+
+/******************************************************/
+
+#footer {
+	width: 100%;
+	position: relative;
+}
+
+#footer > div {
+	float: right;
+}

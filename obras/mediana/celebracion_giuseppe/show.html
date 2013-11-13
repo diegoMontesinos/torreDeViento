@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Torre de Viento</title>
+		<link rel="shortcut icon" href="../../../favicon.ico"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- S T Y L E S H E E T S -->
+		<link rel="stylesheet" type="text/css" href="../../../assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/menu.css">
+		<link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/obra_mediana.css">
+		<link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/jquery.jscrollpane.css">
+
+		<!-- J A V A S C R I P T -->
+		<script src="../../../assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="../../../assets/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+		<script src="../../../assets/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+		<script src="../../../assets/js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+		<script src="../../../assets/js/mwheelIntent.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+		// Funcion que coloca la informacion de la obra en el obra-info-text-content
+		// (manejo onclick de los .obra-info-menu-item)
+		function putTextInfo(id_elem) {
+			$.get('./'+ id_elem +'.html', function(data) {
+  				$("#obra-info-text-content").html(data);
+
+  				if(($('.obra-info-text').data('jsp'))) {
+  					$('.obra-info-text').data('jsp').destroy();
+  				}
+  				$('.obra-info-text').bind('jsp-initialised', 
+					function(event, isScrollable) {
+						// Se redimensiona el area scrollable
+						$(".jspContainer").css('width', '91%');
+						$(".jspContainer").css('margin-right', '2.75%');
+						$(".jspContainer").css('margin-left', '6.25%');
+					}
+				).jScrollPane({hideFocus: true });
+			});
+		}
+
+				function showGallery(folder, nImages) {
+			// Elimina el contenido que haya en obra-display
+			$('#obra-display').empty();
+
+			// Se crea el que sera el contenedor de la galeria
+			$('#obra-display').append('<div id="obra-display-gallery"></div>');
+
+			// Llenamos con las imagenes de la galeria
+			for(var i = 1; i <= nImages; i++) {
+				$('#obra-display-gallery').append('<div class="obra-galeria-img"><img src="../../../assets/images/obras/mediana/celebracion_giuseppe/' + folder + i + '.jpg"></div>');
+			}
+
+			$('#obra-display').append('<div class="clearfix"></div>' +
+									    '<div class="prev" id="galeria-prev"><img src="../../../assets/images/prev_gallery.png" width="100%" height="100%"></div>' +
+									    '<div class="next" id="galeria-next"><img src="../../../assets/images/next_gallery.png" width="100%" height="100%"></div>');
+
+			// Inicia el carousel de la galeria
+			$('#obra-display-gallery').carouFredSel({
+				center: true,
+				items: {
+					visible: 1
+				},
+				scroll: {
+					fx: "none"
+				},
+				auto: false,
+				prev: '#galeria-prev',
+				next: '#galeria-next'
+			});
+
+			// Poniendole efecto al prev y al next
+			$('#obra-display').hover(function() {
+				$('#galeria-prev').animate({opacity: 0.6}, 100);
+				$('#galeria-next').animate({opacity: 0.6}, 100);
+			}, function() {
+				$('#galeria-prev').animate({opacity: 0.02}, 100);
+				$('#galeria-next').animate({opacity: 0.02}, 100);
+			});
+		}
+
+		$(document).ready(function() {
+			$('#logo-img').hover(function() {
+				$('#logo-img img').attr('src', '../../../assets/images/02-LOGO.png');
+			}, function() {
+				$('#logo-img img').attr('src', '../../../assets/images/01-LOGO.png');
+			});
+			
+			$('#footer-legals').hover(function() {
+				$('#footer-legals img').attr('src', '../../../assets/images/legales_sub.png');
+			}, function() {
+				$('#footer-legals img').attr('src', '../../../assets/images/legales.png');
+			});
+
+			putTextInfo('creditos');
+		});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<div class="container" style="width: 1000px; padding: 0">
+
+				<!-- H E A D E R -->
+				<div id="header">
+					<div id="logo-img">
+						<img src="../../../assets/images/01-LOGO.png" width="100%" height="100%" />
+					</div>
+					<div id="languages">
+						<a href="#">Español</a>
+					 	/ 
+						<a href="#">English</a>
+					</div>
+				</div>
+
+				<!-- M E N U -->
+				<div id="menu-navigator" style="margin-top: 25px;">
+					<ul id="menu">
+						<li style="width: 13.8%; padding-left: 5%; padding-right: 4%;"><a href="../../../index.html">INICIO</a></li>
+						<li class="dropdown" style="width: 13%; padding-left: 1.9%; padding-right: 1.9%;"><center>NOSOTROS</center>
+							<ul class="dropdown-menu" style="max-width: 100%; min-width: 100%;">
+								<li><div class="dropdown-item">Acerca de...</div></li>
+								<li><div class="dropdown-item">Qué hacemos</div></li>
+							</ul>
+						</li>
+						<li style="width: 25.8%; padding-left: 3.9%; padding-right: 2.9%;"><a href="../../catalogo.html">CATÁLOGO  DE  OBRAS</a></li>
+						<li style="width: 20.6%; padding-left: 3%; padding-right: 2.9%;"><a href="../../../colaboradores/colaboradores.html">COLABORADORES</a></li>
+						<li style="width: 13.5%; padding-left: 2.9%; padding-right: 4%;"><a href="#">PRENSA</a></li>
+						<li class="dropdown" style="width: 10.2%; padding-left: 1.9%; padding-right: 1.9%;"><center>EXTRAS</center>
+							<ul class="dropdown-menu" style="max-width: 100%; min-width: 100%;">
+								<li><div class="dropdown-item">Links</div></li>
+								<li><div class="dropdown-item">Descargas</div></li>
+								<li><div class="dropdown-item">Noticias</div></li>
+								<li><div class="dropdown-item">Contacto</div></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<!-- D E S P L E G A D O   D E   O B R A -->
+				<div id="obra-container">
+					<div id="obra-display">
+						<img src="../../../assets/images/obras/mediana/celebracion_giuseppe/display.jpg">
+					</div>
+
+					<div id="obra-info">
+						<div class="obra-info-title" style="width: 100%; height: 74px; float: right; margin-top: 12px; padding-left: 6.5%;">
+							<div id="obra-info-title-content" style="width: 100%; height: auto;">
+								<div style="text-align: left; position: relative">
+									<span style="font-family: felixti, felixti_ie; font-size: 18px;">CELEBRACIÓN A GIUSEPPE VERDI</span>
+									<span style="font-family: felixti, felixti_ie; font-size: 14px;">BICENTENARIO DE SU NACIMIENTO, 1813-1901</span><br>
+									<span style="position: relative; font-family: calibri, calibri_ie; font-size: 10px; top: -0.2em;">Ópera de Bellas Artes. Palacio de Bellas Artes. Marzo 2013.</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="obra-info-text" style="width: 100%; height: 402px; float: right; margin-top: 0px;">
+							<div id="obra-info-text-content" style="width: 87.5%; height: auto;">
+							</div>
+						</div>
+						<div id="obra-info-menu-navigator">
+							<ul id="obra-info-menu">
+								<li id="creditos" class="obra-info-menu-item" style="margin-right: 2px;" onclick='putTextInfo("creditos");'><div>CRÉDITOS</div></li>
+								<li id="notas" class="obra-info-menu-item" style="width: 45px; margin-right: 3px;" onclick='putTextInfo("notas");'><div>NOTAS</div></li>
+								<li id="programa" class="obra-info-menu-item" style="width: 60px; margin-left: 3px;" onclick='putTextInfo("programa");'><div>PROGRAMA</div></li>
+
+								<a href="#"><img src="../../../assets/images/next.png" alt="Siguiente" style="width: 10px; height: 20px;"></a>
+								<a href="#"><img src="../../../assets/images/previous.png" alt="Anterior" style="width: 10px; height: 20px;"></a>
+							</ul>
+						</div>
+					</div>
+
+					<div id="obra-menu">
+						<div class="obra-menu-item-left" onclick='showGallery("galeria/", 14);'>
+							<img width="100%" height="150px" src="../../../assets/images/obras/mediana/celebracion_giuseppe/galeria.jpg">
+							<div class="obra-menu-link">GALERIA</div>
+						</div>
+
+						<div class="obra-menu-item-right" onclick='showGallery("otros/", 1);'>
+							<img width="100%" height="150px" src="../../../assets/images/obras/mediana/celebracion_giuseppe/otros.jpg">
+							<div class="obra-menu-link">OTROS</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- F O O T E R -->
+				<div id="footer">
+					<div id="footer-legals" style="width: 14%; cursor: pointer; margin-top: 8px;">
+						<img src="../../../assets/images/legales.png" width="100%" height="100%">
+					</div>
+					<div id="footer-title" style="width: 36%; height: 20px; margin-top: -3px; margin-right: 2px;">
+						<img src="../../../assets/images/titulo_torre.png" width="100%" height="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

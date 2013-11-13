@@ -1,0 +1,25 @@
+body {
+    min-height: 600px;
+}
+
+#wrapper {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+}
+
+#carousel div {
+    cursor: pointer;
+    margin-right: -500px;
+    float: left;
+    background-position: center center;
+    position: relative;
+}
+
+#carousel div:last-child {
+    cursor: inherit;
+}
+
+#news-description #news-description2 #news-description3 #news-description4 {}

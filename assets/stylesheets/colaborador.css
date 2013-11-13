@@ -1,0 +1,114 @@
+/* C O L A B O R A D O R */
+
+#colaborador-container {
+	width: 100%;
+	min-height: 550px;
+	background: #000000;
+}
+
+#colaborador-display {
+	width: 55%;
+	min-height: 550px;
+
+	padding: 0;
+	margin-top: -55%;
+
+	position: relative;
+	float: right;
+
+	background: #000000;
+}
+
+#colaborador-display > img {
+	width: 100%;
+	height: 550px;
+}
+
+#colaborador-info {
+	width: 45%;
+	height: 550px;
+	min-height: 400px;
+
+	padding: 0;
+
+	text-align: justify;
+
+	background: #000000;
+}
+
+/*---------------COLABORADOR INFO------------------------------*/
+
+.colaborador-info-text {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+.colaborador-info-title {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+#colaborador-info-menu-navigator {
+	width: 100%;
+	height: 62px;
+
+	display: block;
+	background-color: #000000;
+}
+
+#colaborador-info-menu {
+	width: 100%;
+	height: 62px;
+
+	position: relative;
+
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 20px;
+
+	color: #FFFFFF;
+	background: #000000;
+	list-style: none;
+	display: inline-table;
+}
+
+#colaborador-info-menu:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#colaborador-info-menu > li {
+	width: 60px;
+	height: 20px;
+
+	position: relative;
+	float: left;
+
+	font-family: latha, latha_ie;
+	font-size: 11px;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+#colaborador-info-menu > li div {
+	position: relative;
+
+	top: 17%;
+}
+
+#colaborador-info-menu > li:hover {
+	background: #FFFFFF;
+	color: #000000;
+}
+
+#colaborador-info-menu > a {
+	position: relative;
+	float: right;
+
+	margin-right: 11px;
+
+	font-family: latha, latha_ie;
+	font-size: 12px;
+}

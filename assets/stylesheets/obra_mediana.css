@@ -1,0 +1,222 @@
+/* C A T A L O G O   O B R A   M E D I A N A */
+
+#obra-container {
+	width: 100%;
+	min-height: 550px;
+	background: #000000;
+}
+
+#obra-display {
+	width: 60%;
+	min-height: 400px;
+
+	padding: 0;
+	margin: 0;
+
+	position: relative;
+
+	background: #FFFFFF;
+}
+
+#obra-display > img {
+	width: 100%;
+	height: 100%;
+}
+
+#obra-info {
+	width: 40%;
+	min-height: 400px;
+
+	margin-top: -40%;
+	padding: 0;
+	float: right;
+
+	text-align: justify;
+
+	background: #000000;
+}
+
+/* --------------------GALERIA--------------------------- */
+#obra-display-gallery {
+	width: 600px;
+	height: 400px;
+
+	background: #000000;
+}
+
+.obra-galeria-img {
+	width: 600px;
+	height: 400px;
+
+	position: relative;
+}
+
+.obra-galeria-img img {
+	width: 100%;
+	height: 100%;
+
+	display: block;
+	float: left;
+
+	background: #000000;
+}
+
+div.prev, div.next {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	cursor: pointer;
+}
+
+div.prev {
+	top: 152px;
+	width: 25px;
+	height: 60px;
+
+	left: 8px;
+}
+
+div.next {
+	top: 153px;
+	width: 25px;
+	height: 60px;
+
+	right: 8px;
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+/* --------------OBRA MENU--------------------------------- */
+
+#obra-menu {
+	width: 100%;
+	height: 150px;
+
+	background-color: #FFFFFF;
+}
+
+
+.obra-menu-item-left {
+	width: 29.9%;
+
+	float: left;
+	padding-right: 1px;
+}
+
+.obra-menu-item {
+	width: 29.9%;
+
+	float: left;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.obra-menu-item-right {
+	width: 29.9%;
+
+	float: left;
+	padding-left: 1px;
+}
+
+.obra-menu-link {
+	width: 40px;
+	height: 13px;
+
+	float: bottom;
+	position: relative;
+	bottom: 38px;
+	left: 233px;
+
+	margin: 0;
+	padding: 0;
+
+	background-color: #000000;
+	color: #FFFFFF;
+	overflow: hidden;
+
+	font-family: euphemia, euphemia_ie;
+	font-size: 10px;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+
+/*---------------OBRA INFO------------------------------*/
+
+.obra-info-text {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+.obra-info-title {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+#obra-info-menu-navigator {
+	width: 100%;
+	height: 62px;
+
+	display: block;
+	background-color: #000000;
+}
+
+#obra-info-menu {
+	width: 100%;
+	height: 62px;
+	position: relative;
+
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 20px;
+
+	color: #FFFFFF;
+	background: #000000;
+	list-style: none;
+	display: inline-table;
+}
+
+#obra-info-menu:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#obra-info-menu > li {
+	width: 60px;
+	height: 20px;
+
+	position: relative;
+	float: left;
+
+	font-family: latha, latha_ie;
+	font-size: 11px;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+#obra-info-menu > li div {
+	position: relative;
+
+	top: 17%;
+}
+
+#obra-info-menu > li:hover {
+	background: #FFFFFF;
+	color: #000000;
+}
+
+#obra-info-menu > a {
+	position: relative;
+	float: right;
+
+	margin-right: 11px;
+
+	font-family: latha, latha_ie;
+	font-size: 12px;
+}

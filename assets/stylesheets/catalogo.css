@@ -1,0 +1,69 @@
+
+div#catalogo-scroll div.scrollableArea div {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+div#catalogo-scroll {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+
+/* G R I D   H O M E */
+
+.catalogo-grid {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.catalogo-image {
+	background-color: black;
+	overflow: hidden;
+	position: absolute;
+
+	cursor: pointer;
+}
+
+.catalogo-image > img {
+	position: relative;
+}
+
+.catalogo-noImage {
+	background-color: black;
+	position: absolute;
+}
+
+.info-image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: right;
+	text-align: right;
+}
+
+.info-image h2 {
+	position: relative;
+
+	margin-left: 8px;
+	margin-right: 5px;
+	color: gray;
+	font-family: felixti, felixti_ie;
+	font-size: 10pt;
+}
+
+.clear {
+	clear: both;
+	margin-top: 10px;
+}
+
+/*---------------------------------------------*/
+
+div#lower-bar {
+	width: 100%;
+	height: 50px;
+
+	background: #000000;
+}
