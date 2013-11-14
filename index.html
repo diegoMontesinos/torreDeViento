@@ -149,7 +149,10 @@
 					$('.news-item-left').css('filter', 'alpha(opacity = 100)');
 		 		});
 
+		 		var automaticScrollCarousel = undefined;
+
 				$('#carousel').carouFredSel({
+					manualContinuousScrolling: true,
 					width: 1000,
 					height: 400,
 					align: false,
@@ -162,8 +165,6 @@
 					},
 					scroll: {
 						items: 1,
-						duration: 1000,
-						easing: "cubic",
 						fx: "directscroll",
 						onBefore: function( data ) {
 							data.items.old.add( data.items.visible ).find( 'span' ).stop().slideUp();
@@ -172,32 +173,23 @@
 							data.items.visible.last().css( 'zIndex', 2 )
 						}
 					},
-					auto: false,					
+					auto: false,
+					next: '#galeria-prev',
+					prev: '#galeria-next'
 				});
 
-				setInterval(function() {
+				automaticScrollCarousel = setInterval(function() {
 					$('#carousel').trigger( 'slideTo', [$('#carousel').children(), -1, 'prev'] );
-				}, 3000);
+				}, 2500);
 				
-				$('#carousel').find('div').click(function() {
-					$('#carousel').trigger( 'slideTo', [this, -4, 'prev'] );
-				});
-				
-				$('#carousel').children().hover(function() {
-					$('#carousel').trigger('currentVisible', function( items ) {
-						items.addClass('curr_visible');
-					});
-
-					// Es distinto del de hasta arriba?
-					if(this != $('.curr_visible')[4]) {
-						$(this).css('-webkit-filter', 'brightness(80%)');
-						$(this).css('-moz-filter', 'brightness(80%)');
-						$(this).css('filter', 'brightness(0.8)');
-					}
+				// Se detiene si le pasas el mouse encima y continua cuando se lo quitamos
+				// y poniendole efecto al prev y al next
+				$('#carousel').hover(function() {
+					clearInterval(automaticScrollCarousel);
 				}, function() {
-					$(this).css('-webkit-filter', 'brightness(100%)');
-					$(this).css('-moz-filter', 'brightness(100%)');
-					$(this).css('filter', 'brightness(1.0)');
+					automaticScrollCarousel = setInterval(function() {
+						$('#carousel').trigger( 'slideTo', [$('#carousel').children(), -1, 'prev'] );
+					}, 2500);
 				});
 			});
 		</script>
@@ -222,56 +214,60 @@
 
 				<!-- C A R O U S E L -->
 				<div id= "wrapper">
-					<a id="next" href="#"></a>
-					<div id="carousel">
-						<div><img src="assets/images/home/90 AÑOS SEP HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/90 AÑOS SEP HOME HOME 2 .jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/BARBERO HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/CELVERDI HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/CELWAGNER HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/CHARAIZA HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/CHJASO HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/CRISISS HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/CRYP2011 HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/DON PASQUALE HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/ESMERALDA HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/ESMERALDA HOME HOME 2.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/ESMERALDA HOME HOME 3.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/ESMERALDA HOME HOME 4.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/ESMERALDA HOME HOME 5.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/FROSCH HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/FROSCH HOME HOME 2.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/FROSCH HOME HOME 3.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/FROSCH HOME HOME 4.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/FROSCH HOME HOME 5.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/HYG HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/IL POSTINO HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/IL POSTINO HOME HOME 2.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/IL POSTINO HOME HOME 3.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/LA HIJA HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/MEN V HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/MEN V HOME HOME 2.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/MEN V HOME HOME 3.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/MEN V HOME HOME 4.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/MEN V HOME HOME 5.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/MESSA2013 HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 2.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 3.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 4.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 5.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RCAMARENA 2011 HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/REAPERTURA PBA FOTO (23).jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/REAPERTURA PBA HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RM ALEJANDRES 2012 HOME HOME.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RUEDA HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RUEDA HOME HOME 2.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RUEDA HOME HOME 3.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RUEDA HOME HOME 4.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RUEDA HOME HOME 5.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/RV30 HOME  HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/ULV HOME HOME 1.jpg" width="600" height="400" /></div>
-						<div><img src="assets/images/home/VVERDI HOME HOME.jpg" width="600" height="400" /></div>
+					<div id="carousel-wrapper">
+						<div id="carousel">
+							<div><img src="assets/images/home/90 AÑOS SEP HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/90 AÑOS SEP HOME HOME 2 .jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/BARBERO HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/CELVERDI HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/CELWAGNER HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/CHARAIZA HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/CHJASO HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/CRISISS HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/CRYP2011 HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/DON PASQUALE HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/ESMERALDA HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/ESMERALDA HOME HOME 2.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/ESMERALDA HOME HOME 3.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/ESMERALDA HOME HOME 4.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/ESMERALDA HOME HOME 5.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/FROSCH HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/FROSCH HOME HOME 2.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/FROSCH HOME HOME 3.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/FROSCH HOME HOME 4.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/FROSCH HOME HOME 5.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/HYG HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/IL POSTINO HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/IL POSTINO HOME HOME 2.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/IL POSTINO HOME HOME 3.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/LA HIJA HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/MEN V HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/MEN V HOME HOME 2.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/MEN V HOME HOME 3.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/MEN V HOME HOME 4.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/MEN V HOME HOME 5.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/MESSA2013 HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 2.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 3.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 4.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/PAGLIACCI CCMO HOME HOME 5.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RCAMARENA 2011 HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/REAPERTURA PBA FOTO (23).jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/REAPERTURA PBA HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RM ALEJANDRES 2012 HOME HOME.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RUEDA HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RUEDA HOME HOME 2.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RUEDA HOME HOME 3.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RUEDA HOME HOME 4.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RUEDA HOME HOME 5.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/RV30 HOME  HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/ULV HOME HOME 1.jpg" width="600" height="400" /></div>
+							<div><img src="assets/images/home/VVERDI HOME HOME.jpg" width="600" height="400" /></div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="prev" id="galeria-prev"><img src="assets/images/prev_gallery.png" width="100%" height="100%"></div>
+						<div class="next" id="galeria-next"><img src="assets/images/next_gallery.png" width="100%" height="100%"></div>
 					</div>
 				</div>
 
